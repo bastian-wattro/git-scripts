@@ -191,9 +191,9 @@ def main():
         for branch in not_pushed_branches:
             print(branch)
         if not args.delete_untracked:
-            choice = input("Force delete all untracked branches? [yes|No]:  ")
-            if choice and choice.lower()[0] == "y":
-                delete_branches(not_pushed_branches, force=True)
+            print(
+                f"run again with --delete-untracked to delete {len(not_pushed_branches)} branches."
+            )
     else:
         print("(none)")
 
