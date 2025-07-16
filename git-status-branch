@@ -180,8 +180,8 @@ def main():
         for branch in gone_branches:
             print(branch)
         if not args.delete_gone:
-            choice = input("Force delete all gone branches? [yes|No]:  ")
-            if choice and choice.lower()[0] == "y":
+            choice = input("Force delete all gone branches? [Yes|no]:  ")
+            if not choice or choice.lower()[0] != "n":
                 delete_branches(gone_branches, force=True)
     else:
         print("(none)")
