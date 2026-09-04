@@ -117,7 +117,7 @@ def main():
         description="Show and optionally clean up Git branches"
     )
     parser.add_argument(
-        "--delete-gone",
+        "-d", "--delete-gone",
         action="store_true",
         help="Delete branches that are gone on origin",
     )
